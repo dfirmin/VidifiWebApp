@@ -225,13 +225,56 @@
     <Compile Include="Migrations\201712311559443_AddNamesToMemmbershipTable.Designer.cs">
       <DependentUpon>201712311559443_AddNamesToMemmbershipTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712311613459_AddBirthdateColumnToCustomer.cs" />
+    <Compile Include="Migrations\201712311613459_AddBirthdateColumnToCustomer.Designer.cs">
+      <DependentUpon>201712311613459_AddBirthdateColumnToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712311638000_AddMoviesTableToDatabase.cs" />
+    <Compile Include="Migrations\201712311638000_AddMoviesTableToDatabase.Designer.cs">
+      <DependentUpon>201712311638000_AddMoviesTableToDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712311651303_AddedColumnsToMovieTableAndCreatedGenreTable.cs" />
+    <Compile Include="Migrations\201712311651303_AddedColumnsToMovieTableAndCreatedGenreTable.Designer.cs">
+      <DependentUpon>201712311651303_AddedColumnsToMovieTableAndCreatedGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712311652563_ChangedDataTypeForCustomerBirthdate.cs" />
+    <Compile Include="Migrations\201712311652563_ChangedDataTypeForCustomerBirthdate.Designer.cs">
+      <DependentUpon>201712311652563_ChangedDataTypeForCustomerBirthdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712311657257_AddRequiredToMovieGenre.cs" />
+    <Compile Include="Migrations\201712311657257_AddRequiredToMovieGenre.Designer.cs">
+      <DependentUpon>201712311657257_AddRequiredToMovieGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712312133098_UpdatedCustomerTableDateTimeToNullable.cs" />
+    <Compile Include="Migrations\201712312133098_UpdatedCustomerTableDateTimeToNullable.Designer.cs">
+      <DependentUpon>201712312133098_UpdatedCustomerTableDateTimeToNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712312150077_UpdatedMoviesControllerToFetchAllMovies.cs" />
+    <Compile Include="Migrations\201712312150077_UpdatedMoviesControllerToFetchAllMovies.Designer.cs">
+      <DependentUpon>201712312150077_UpdatedMoviesControllerToFetchAllMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712312153218_AddMovestoMovieDB.cs" />
+    <Compile Include="Migrations\201712312153218_AddMovestoMovieDB.Designer.cs">
+      <DependentUpon>201712312153218_AddMovestoMovieDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712312202268_UpdateGenreTable.cs" />
+    <Compile Include="Migrations\201712312202268_UpdateGenreTable.Designer.cs">
+      <DependentUpon>201712312202268_UpdateGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712312208541_UpdateGenreTable1.cs" />
+    <Compile Include="Migrations\201712312208541_UpdateGenreTable1.Designer.cs">
+      <DependentUpon>201712312208541_UpdateGenreTable1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\NewCustomerViewModel.cs" />
+    <Compile Include="Models\NewMovieViewModel.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -420,6 +463,9 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
+    <Content Include="Views\Customers\CustomerForm.cshtml" />
+    <Content Include="Views\Movies\MovieForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -459,6 +505,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712311559443_AddNamesToMemmbershipTable.resx">
       <DependentUpon>201712311559443_AddNamesToMemmbershipTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712311613459_AddBirthdateColumnToCustomer.resx">
+      <DependentUpon>201712311613459_AddBirthdateColumnToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712311638000_AddMoviesTableToDatabase.resx">
+      <DependentUpon>201712311638000_AddMoviesTableToDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712311651303_AddedColumnsToMovieTableAndCreatedGenreTable.resx">
+      <DependentUpon>201712311651303_AddedColumnsToMovieTableAndCreatedGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712311652563_ChangedDataTypeForCustomerBirthdate.resx">
+      <DependentUpon>201712311652563_ChangedDataTypeForCustomerBirthdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712311657257_AddRequiredToMovieGenre.resx">
+      <DependentUpon>201712311657257_AddRequiredToMovieGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712312133098_UpdatedCustomerTableDateTimeToNullable.resx">
+      <DependentUpon>201712312133098_UpdatedCustomerTableDateTimeToNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712312150077_UpdatedMoviesControllerToFetchAllMovies.resx">
+      <DependentUpon>201712312150077_UpdatedMoviesControllerToFetchAllMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712312153218_AddMovestoMovieDB.resx">
+      <DependentUpon>201712312153218_AddMovestoMovieDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712312202268_UpdateGenreTable.resx">
+      <DependentUpon>201712312202268_UpdateGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712312208541_UpdateGenreTable1.resx">
+      <DependentUpon>201712312208541_UpdateGenreTable1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
