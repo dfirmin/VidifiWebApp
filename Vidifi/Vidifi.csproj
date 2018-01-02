@@ -265,6 +265,46 @@
     <Compile Include="Migrations\201712312208541_UpdateGenreTable1.Designer.cs">
       <DependentUpon>201712312208541_UpdateGenreTable1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801021846552_UpdateMovieModel.cs" />
+    <Compile Include="Migrations\201801021846552_UpdateMovieModel.Designer.cs">
+      <DependentUpon>201801021846552_UpdateMovieModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801021921210_RemovedGenreIDFromMovieClass.cs" />
+    <Compile Include="Migrations\201801021921210_RemovedGenreIDFromMovieClass.Designer.cs">
+      <DependentUpon>201801021921210_RemovedGenreIDFromMovieClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801021930597_RemovedGenreIDFromMovieDatabaseAndReAddToClass.cs" />
+    <Compile Include="Migrations\201801021930597_RemovedGenreIDFromMovieDatabaseAndReAddToClass.Designer.cs">
+      <DependentUpon>201801021930597_RemovedGenreIDFromMovieDatabaseAndReAddToClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801021941179_RemovedGenreIDFromMovieDatabaseAndReAddToClass1.cs" />
+    <Compile Include="Migrations\201801021941179_RemovedGenreIDFromMovieDatabaseAndReAddToClass1.Designer.cs">
+      <DependentUpon>201801021941179_RemovedGenreIDFromMovieDatabaseAndReAddToClass1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801021944288_RenameGenreIDColumnInMoviesTable.cs" />
+    <Compile Include="Migrations\201801021944288_RenameGenreIDColumnInMoviesTable.Designer.cs">
+      <DependentUpon>201801021944288_RenameGenreIDColumnInMoviesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801022017261_DropMoviesTable.cs" />
+    <Compile Include="Migrations\201801022017261_DropMoviesTable.Designer.cs">
+      <DependentUpon>201801022017261_DropMoviesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801022020348_ReAddMoviesTable.cs" />
+    <Compile Include="Migrations\201801022020348_ReAddMoviesTable.Designer.cs">
+      <DependentUpon>201801022020348_ReAddMoviesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801022137421_DeleteMovieModel.cs" />
+    <Compile Include="Migrations\201801022137421_DeleteMovieModel.Designer.cs">
+      <DependentUpon>201801022137421_DeleteMovieModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801022146559_AddMovieTableAgain.cs" />
+    <Compile Include="Migrations\201801022146559_AddMovieTableAgain.Designer.cs">
+      <DependentUpon>201801022146559_AddMovieTableAgain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801022159573_AddMovieTableAgain1.cs" />
+    <Compile Include="Migrations\201801022159573_AddMovieTableAgain1.Designer.cs">
+      <DependentUpon>201801022159573_AddMovieTableAgain1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -535,6 +575,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712312208541_UpdateGenreTable1.resx">
       <DependentUpon>201712312208541_UpdateGenreTable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801021846552_UpdateMovieModel.resx">
+      <DependentUpon>201801021846552_UpdateMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801021921210_RemovedGenreIDFromMovieClass.resx">
+      <DependentUpon>201801021921210_RemovedGenreIDFromMovieClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801021930597_RemovedGenreIDFromMovieDatabaseAndReAddToClass.resx">
+      <DependentUpon>201801021930597_RemovedGenreIDFromMovieDatabaseAndReAddToClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801021941179_RemovedGenreIDFromMovieDatabaseAndReAddToClass1.resx">
+      <DependentUpon>201801021941179_RemovedGenreIDFromMovieDatabaseAndReAddToClass1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801021944288_RenameGenreIDColumnInMoviesTable.resx">
+      <DependentUpon>201801021944288_RenameGenreIDColumnInMoviesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801022017261_DropMoviesTable.resx">
+      <DependentUpon>201801022017261_DropMoviesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801022020348_ReAddMoviesTable.resx">
+      <DependentUpon>201801022020348_ReAddMoviesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801022137421_DeleteMovieModel.resx">
+      <DependentUpon>201801022137421_DeleteMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801022146559_AddMovieTableAgain.resx">
+      <DependentUpon>201801022146559_AddMovieTableAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801022159573_AddMovieTableAgain1.resx">
+      <DependentUpon>201801022159573_AddMovieTableAgain1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

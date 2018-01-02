@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Vidifi.Models;
 using System.Data.Entity;
+using System.Data.Entity.Validation;
 
 namespace Vidifi.Controllers
 {
@@ -25,9 +26,10 @@ namespace Vidifi.Controllers
         // GET: Movies
         public ActionResult Index()
         {
+            
             var movies = _context.Movies.Include(m => m.Genre).ToList();
-
-
+            
+           
             return View(movies);
         }
         
@@ -48,6 +50,7 @@ namespace Vidifi.Controllers
         {
             if (movie.Id == 0)
             {
+                movie.DateAdded = DateTime.Now;
                 _context.Movies.Add(movie);
             }
 
@@ -56,11 +59,12 @@ namespace Vidifi.Controllers
                 var movieInDb = _context.Movies.Single(c => c.Id == movie.Id);
 
                 movieInDb.Name = movie.Name;
+                movieInDb.GenreId = movie.GenreId;
                 movieInDb.ReleaseDate = movie.ReleaseDate;
-                movieInDb.Genre = movie.Genre;
                 movieInDb.NumberInStock = movie.NumberInStock;
             }
             _context.SaveChanges();
+
             return RedirectToAction("Index","Movies");
         }
 
