@@ -61,7 +61,7 @@ namespace Vidifi.Controllers
        
         {
 
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 var viewModel = new NewCustomerViewModel
                 {
