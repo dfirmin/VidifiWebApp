@@ -16,10 +16,12 @@ namespace Vidifi.Dtos
         public string Name { get; set; }
         public bool IsSubscribedToNewsletter { get; set; }
 
-        //Membership type is implicitly required
-        public MembershipType MembershipType { get; set; }
         public byte MembershipTypeId { get; set; }
+        //Membership type is implicitly required
+        public MembershipTypeDto MembershipType { get; set; }
+        
 
+        
         //Adds custom validation from the Min18YearIfAMember class
         [Min18YearsIfAMember]
         public DateTime? Birthdate { get; set; }
