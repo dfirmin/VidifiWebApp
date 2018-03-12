@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using System.ComponentModel.DataAnnotations;
+using Vidifi.Models;
 
-namespace Vidifi.Models
+namespace Vidifi.Dtos
 {
-    public class Customer
+    public class CustomerDto
     {
         public int Id { get; set; }
         //You can override a validation error by using syntax below
@@ -22,5 +23,5 @@ namespace Vidifi.Models
         //Adds custom validation from the Min18YearIfAMember class
         [Min18YearsIfAMember]
         public DateTime? Birthdate { get; set; }
-    }   
+    }
 }

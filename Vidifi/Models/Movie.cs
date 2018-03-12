@@ -8,6 +8,8 @@ namespace Vidifi.Models
 {
     public class Movie
     {
+        [Key]
+        [Required]
         public int Id { get; set; }
 
         [Required]
@@ -17,15 +19,15 @@ namespace Vidifi.Models
         public Genre Genre { get; set; }
 
         
-        [Required]
+        
         public int GenreId { get; set; }
-
+        
         public DateTime DateAdded { get; set; }
 
        
         public DateTime ReleaseDate { get; set; }
-
         
+        [Required]
         public byte NumberInStock { get; set; }
 
     }

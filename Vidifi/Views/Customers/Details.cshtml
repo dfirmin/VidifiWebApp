@@ -10,7 +10,8 @@
 <ul>
 
     <li>@Model.MembershipType.MembershipName</li>
-    @if (!String.IsNullOrEmpty(Model.Birthdate))
+    @if (!Model.Birthdate.HasValue)
+        
     {
         <li>@Model.Birthdate</li>
 

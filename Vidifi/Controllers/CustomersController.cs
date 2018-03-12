@@ -50,6 +50,7 @@ namespace Vidifi.Controllers
             var membershipTypes = _context.MembershipType.ToList();
             var viewModel = new NewCustomerViewModel
             {
+                Customer = new Customer(),
                 MembershipTypes = membershipTypes
             };
 
@@ -57,17 +58,24 @@ namespace Vidifi.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
+            
        
         {
-
+            Console.WriteLine("Test");
+            //when aspnet mvc checks the customer object, it checks to see if its valid
+            //Here I am using ModelState to check if the object is not valid then return the same view(customer form)
             if (!ModelState.IsValid)
             {
                 var viewModel = new NewCustomerViewModel
                 {
+                    
                     Customer = customer,
                     MembershipTypes = _context.MembershipType.ToList()
+                    
                 };
+                
                 return View("CustomerForm", viewModel);
             }
 

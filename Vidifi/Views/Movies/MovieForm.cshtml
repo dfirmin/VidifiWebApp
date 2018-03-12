@@ -11,10 +11,20 @@
 
 
 @using (Html.BeginForm("Save", "Movies"))
+
 {
+    @Html.ValidationSummary();
     <div class="form-group">
         @Html.LabelFor(m => m.Movie.Name)
         @Html.TextBoxFor(m => m.Movie.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Movie.Name)
+    </div>
+
+    <div class="form-group">
+        <label for="Genre">Genre</label>
+
+        @Html.DropDownListFor(m => m.Movie.GenreId, new SelectList(Model.Genre, "Id", "Name"), "Select Genre", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Movie.GenreId)
     </div>
 
     <div class="form-group">
@@ -24,20 +34,19 @@
     </div>
 
     <div class="form-group">
-        <label for="Genre">Genre</label>
-
-        @Html.DropDownListFor(m => m.Movie.GenreId, new SelectList(Model.Genre, "Id", "Name"), "Select Genre", new { @class = "form-control" })
-    </div>
-
-    <div class="form-group">
         <label for="NumberInStock">Number In Stock</label>
         @Html.TextBoxFor(m => m.Movie.NumberInStock, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Movie.NumberInStock)
     </div>
     @Html.HiddenFor(m => m.Movie.Id)
+    @Html.AntiForgeryToken()
     <button type="submit" class="btn btn-primary">Save</button>
 
 
 
+}
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
 }
 
 
