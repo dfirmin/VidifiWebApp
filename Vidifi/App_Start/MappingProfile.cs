@@ -15,6 +15,9 @@ namespace Vidifi.App_Start
             Mapper.CreateMap<Customer, CustomerDto>();
             Mapper.CreateMap<CustomerDto, Customer>();
             Mapper.CreateMap<MembershipType, MembershipTypeDto>();
+            Mapper.CreateMap<MembershipTypeDto, MembershipType>();
+            Mapper.CreateMap<Movie, MoveDto>();
+            Mapper.CreateMap<MoveDto, Movie>();
 
         }
     }

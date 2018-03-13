@@ -23,6 +23,8 @@ namespace Vidifi.Models
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Movie> Movies { get; set; }
         public DbSet <MembershipType> MembershipType { get; set; }
+
+        public DbSet<Rental> Rentals { get; set; }
         public DbSet <Genre> Genre { get; set; }
 
         public ApplicationDbContext()
